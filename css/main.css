@@ -1,0 +1,74 @@
+/* FONTS */
+
+@font-face{
+	font-family: kumbh-light;
+	src: url(Kumbh_Sans/KumbhSans-Light.ttf);
+}
+@font-face{
+	font-family: kumbh-regular;
+	src: url(Kumbh_Sans/KumbhSans-Regular.ttf);
+}
+@font-face{
+	font-family: kumbh-bold;
+	src: url(Kumbh_Sans/KumbhSans-Bold.ttf);
+}
+
+/* EVERYTHING */
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+/* BODY */
+
+body{
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #261E1F;
+	font-family: kumbh-regular;
+}
+
+/* MAIN BG MOVING */
+
+#main-bg{
+	position: absolute;
+	z-index: -1000;
+	top: 0;
+	width: 100vw;
+	height: 500vh;
+	background: #261E1F;
+	background-image: linear-gradient(150deg, #261E1F, #6E292E);
+	animation: mainBg /* 120 */3s linear infinite alternate;
+}
+@keyframes mainBg{
+	from{
+		top: 0;
+	}
+	to{
+		top: -400%;
+	}
+}
+
+/* GAME BOARD */
+
+#game-board{
+	height: 95vmin;
+	width: 95vmin;
+	background: #e3e3e3;
+	border-radius: 1vmin;
+}
+
+/* CREDITS */
+#credits{
+	margin-top: 20px;
+	font-size: 12px;
+	color: #F5C995;
+}
